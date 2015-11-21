@@ -1,0 +1,5 @@
+#church-controller { position:absolute;  bottom:10px; left:50%; }
+#church-banner ul { position:relative;}
+#church-banner ul .church-item { position:absolute}
+.controller-item { display:inline-block; width:10px; height:10px; background:#f00; margin-right:10px; border-radius:10px; opacity:0.5;}
+.controller-item-hover { opacity:1;}
