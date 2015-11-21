@@ -26,3 +26,18 @@
 	$('#church-banner').slide();
 </script>
 ```
+
+## 参数
+
+参数说明
+
+```html
+
+<script type="text/javascript">
+	$('#church-banner').slide({
+		cdTime : 3000, 		//切换时间
+		controllerLeftButton : "leftButtonPath", 	//向左按钮图片地址
+		controllerRightButton : "rightButtonPath"	//向右按钮图片地址
+	});
+</script>
+```
