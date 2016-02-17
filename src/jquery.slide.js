@@ -11,7 +11,7 @@
 				C,
 				host = this,
 				_timer = null,
-				_DefaultConfig = {cdTime:3000, controllerLeftButton: "../img/ser-l.gif", controllerRightButton:"../img/ser-r.gif"},
+				_DefaultConfig = {cdTime:3000, controllerLeftButton: "", controllerRightButton:""},
 				config = $.extend({}, _DefaultConfig, config);
 				
 			C = {
@@ -33,11 +33,12 @@
 					_s.controllerItemHoverClass = 'controller-item-hover';
 					_s.controllerLeftButton = 'controller-left';
 					_s.controllerRightButton = 'controller-right';
+					_s.transformClass = 'church-transform';
 					_s.item = 'church-item';
 					_s._length = $(host).find('.' + _s.item).length;
 					
-					$('<div id="'+_s.controllerLeftButton+'"><img src="'+config.controllerLeftButton+'"</div>').appendTo($(host));
-					$('<div id="'+_s.controllerRightButton+'"><img src="'+config.controllerRightButton+'"</div>').appendTo($(host));
+					config.controllerLeftButton && $('<div id="'+_s.controllerLeftButton+'"><img src="'+config.controllerLeftButton+'"</div>').appendTo($(host));
+					config.controllerRightButton && $('<div id="'+_s.controllerRightButton+'"><img src="'+config.controllerRightButton+'"</div>').appendTo($(host));
 					$('<div id="'+_s.controllerBoxId+'"></div>').appendTo($(host));
 					for (; i < _s._length; i += 1) {
 						$('<a class="'+_s.controllerItemClass+'"></a>').appendTo(C.id(_s.controllerBoxId));
@@ -78,7 +79,9 @@
 					C.cls(_s.controllerItemClass).filter(':eq('+_curIndex+')').addClass(_s.controllerItemHoverClass);
 					
 					C.cls(_s.item).fadeOut('fast');
+					C.cls(_s.item).removeClass(_s.transformClass);
 					C.cls(_s.item).filter(':eq('+_curIndex+')').fadeIn('slow');
+					C.cls(_s.item).filter(':eq('+_curIndex+')').addClass(_s.transformClass);
 				},
 				_BindControllerButtonClick : function() {
 					var _s = this;

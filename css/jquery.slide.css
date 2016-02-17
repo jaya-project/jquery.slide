@@ -4,4 +4,5 @@
 #controller-left { position:absolute; left:0; top:40%; cursor:pointer;}
 #controller-right { position:absolute; right:0; top:40%; cursor:pointer;}
 .controller-item { display:inline-block; width:10px; height:10px; background:#f00; margin-right:10px; border-radius:10px; opacity:0.5; cursor:pointer;}
-.controller-item-hover { opacity:1;}
+.controller-item-hover { opacity:1; background:#ccc; transform: rotateX(360deg); transition:transform 2s;}
+.church-transform { transform:scale(1.1, 1.1); transition:transform 8s;}
