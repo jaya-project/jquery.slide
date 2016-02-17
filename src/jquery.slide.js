@@ -49,6 +49,7 @@
 					
 					this._BindControllerBoxHover();
 					this._BindControllerButtonClick();
+					this._ToStopWhenHoverImage();
 					
 					return this;
 				},
@@ -82,6 +83,14 @@
 					C.cls(_s.item).removeClass(_s.transformClass);
 					C.cls(_s.item).filter(':eq('+_curIndex+')').fadeIn('slow');
 					C.cls(_s.item).filter(':eq('+_curIndex+')').addClass(_s.transformClass);
+				},
+				_ToStopWhenHoverImage : function() {
+					var _s = this;
+					C.cls(_s.item).hover(function() {
+						_s._stop();
+					}, function() {
+						_s._autoRun();
+					});
 				},
 				_BindControllerButtonClick : function() {
 					var _s = this;
