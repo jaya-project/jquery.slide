@@ -46,6 +46,7 @@
 					
 					$(host).find('.church-item').not(':eq(0)').hide();
 					C.cls(_s.controllerItemClass).filter(':eq(0)').addClass(_s.controllerItemHoverClass);
+					C.cls(_s.item).filter(':eq(0)').addClass(_s.transformClass);
 					
 					this._BindControllerBoxHover();
 					this._BindControllerButtonClick();
