@@ -1,5 +1,5 @@
 # jquery.slide
-一个简单的焦点图切换jquery插件
+一个简单的焦点图切换jquery插件, 支持缓慢放大
 
 ## 安装
 
