@@ -41,3 +41,6 @@
 	});
 </script>
 ```
+## 注意Attention
+
+jquery版本需要1.8以上
